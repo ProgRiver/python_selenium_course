@@ -7,4 +7,4 @@ My tasks for the test automation course. Year 2022.
 
 pip install selenium==3.14.0
 
-:blush:
+EMOJI :blush:
