@@ -3,7 +3,6 @@ import pytest
 import sys
 
 
-<<<<<<< HEAD
 def test_control(browser):
     page = MainPage(browser, "https://yandex.by")
     page.open()
@@ -33,8 +32,3 @@ def test_control_2(browser):
 #     link = "http://selenium1py.pythonanywhere.com/"
 #     page = MainPage(browser, link)
 #     page.open()
-=======
-def test_element_presence_control(browser):
-    browser.get("https://stepik.org/")
-    assert browser.find_element(By.CLASS_NAME, "navbar__submenu-toggler"), "[!] Элемент не найден [!]"
->>>>>>> 0854f21a59beb084b0fc070b4fe079ef06367227
