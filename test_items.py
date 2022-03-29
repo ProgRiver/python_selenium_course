@@ -1,34 +1,26 @@
 from .pages.main_page import MainPage
 import pytest
-import sys
 
 
-def test_control(browser):
-    page = MainPage(browser, "https://yandex.by")
+url = "https://yandex.by"
+
+
+def test_guest_sees_page_elements(browser):
+    page = MainPage(browser, url)
     page.open()
     page.should_be_all_elements()
-    page.should_be_button_login()
-    # page.click_button_login_page()
-    # page.result()
 
 
-# @pytest.mark.skipif(reason="нет элемента")
-# @pytest.mark.skip(reason="пропуск теста")
-def test_control_2(browser):
-    page2 = MainPage(browser, "https://yandex.by")
+def test_guest_sees_button_login(browser):
+    try:
+        page = MainPage(browser, url)
+        page.open()
+        page.should_be_button_login()
+    except AssertionError:
+        pytest.exit(reason="\nНет кнопки перехода на страницу логина")
+
+
+def test_guest_go_to_login_page(browser):
+    page2 = MainPage(browser, url)
     page2.open()
     page2.click_button_login_page()
-
-
-# def test_control(browser):
-#     link = "http://selenium1py.pythonanywhere.com/"
-#     page = MainPage(browser, link)
-#     page.open()
-#     page.should_be_button_login()
-
-
-# @pytest.mark.skipif(1 == 1, reason="[!] First test_control FAILED [!]")
-# def test2(browser):
-#     link = "http://selenium1py.pythonanywhere.com/"
-#     page = MainPage(browser, link)
-#     page.open()

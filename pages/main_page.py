@@ -33,9 +33,3 @@ class MainPage(BasePage):
     def should_be_button_login(self):
         """Наличие кнопки перехода на страницу логина"""
         assert self.is_element_present(*MainPageLocators.BTN_LOGIN), "[!] Элемент не найден [!]"
-
-
-    # def should_be_button_login(self):
-    #     """Наличие кнопки перехода на страницу логина"""
-    #     assert self.is_element_present(*MainPageLocators.LOGIN_LINK), "[!] Элемент не найден [!]"
-    

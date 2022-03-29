@@ -22,7 +22,3 @@ class BasePage:
 
     def click_button_login_page(self):
         self.browser.find_element(*MainPageLocators.BTN_LOGIN).click()
-    
-
-    # def res_element(self):
-    #     assert self.is_element_present(*MainPageLocators.LOGIN_LINK)

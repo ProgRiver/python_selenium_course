@@ -8,4 +8,9 @@ class MainPageLocators:
     BTN_SEARCH = (By.CSS_SELECTOR, ".button.mini-suggest__button")
     BTN_LOGIN = (By.CSS_SELECTOR, "a.desk-notif-card__login-new-item_enter")
 
-    # LOGIN_LINK = (By.CSS_SELECTOR, "#login_link1")
+
+class LoginPageLocators:
+    LOGIN_FORM = ()
+    INPUT_EMAIL = ()
+    BTN_SUBMIT = ()
+    
