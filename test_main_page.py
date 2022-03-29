@@ -2,7 +2,7 @@ from .pages.main_page import MainPage
 import pytest
 
 
-url = "https://yandex.by"
+url = "https://yandex.ru"
 
 
 def test_guest_sees_page_elements(browser):
