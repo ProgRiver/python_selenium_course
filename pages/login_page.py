@@ -31,3 +31,12 @@ class LoginPage(BasePage):
     def should_be_providers_block(self):
         """Список провайдеров для входа"""
         assert self.is_element_present(*LoginPageLocators.BLOCK_PROVIDERS), f"{text_info}"
+    
+
+    def should_be_register_form(self):
+        """Наличие формы регистрации нового пользователя"""
+        assert self.is_element_present(*LoginPageLocators.REGISTER_FORM), f"{text_info}"
+
+
+    def click_button_register_new_user(self):
+        self.browser.find_element(*LoginPageLocators.BTN_REGISTER).click()

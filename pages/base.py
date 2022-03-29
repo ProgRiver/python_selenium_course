@@ -1,4 +1,5 @@
 from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import InvalidSelectorException
 from .locators import MainPageLocators
 from .locators import LoginPageLocators
 
@@ -16,7 +17,7 @@ class BasePage:
     def is_element_present(self, method, locator):
         try:
             self.browser.find_element(method, locator)
-        except NoSuchElementException:
+        except InvalidSelectorException:
             return False
         return True
 

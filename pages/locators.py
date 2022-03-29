@@ -13,6 +13,7 @@ class MainPageLocators:
 class LoginPageLocators:
     
     LOGIN_FORM = (By.CSS_SELECTOR, ".passp-auth-content")
+    REGISTER_FORM = (By.CSS_SELECTOR, ".registration__block")
     INPUT_EMAIL = (By.ID, "passp-field-login")
     BTN_SUBMIT = (By.ID, "passp:sign-in")
     BTN_REGISTER = (By.ID, "passp:exp-register")
