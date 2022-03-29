@@ -21,6 +21,7 @@ def test_guest_sees_button_login(browser):
 
 
 def test_guest_go_to_login_page(browser):
-    page2 = MainPage(browser, url)
-    page2.open()
-    page2.click_button_login_page()
+    page = MainPage(browser, url)
+    page.open()
+    page.click_button_login_page()
+    page.should_be_login_form()
