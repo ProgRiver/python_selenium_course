@@ -4,3 +4,4 @@ h.txt
 reg_config.py
 *.log
 *.html
+*.css

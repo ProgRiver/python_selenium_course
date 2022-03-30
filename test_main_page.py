@@ -10,7 +10,7 @@ def test_guest_sees_page_elements(browser):
     page.open()
     page.should_be_all_elements()
 
-@pytest.mark.skip
+# @pytest.mark.skip
 def test_guest_sees_button_login(browser):
     try:
         page = MainPage(browser, url)
@@ -19,7 +19,7 @@ def test_guest_sees_button_login(browser):
     except AssertionError:
         pytest.exit(reason="\nНет кнопки перехода на страницу логина")
 
-@pytest.mark.skip
+# @pytest.mark.skip
 def test_guest_go_to_login_page(browser):
     page = MainPage(browser, url)
     page.open()
