@@ -1,4 +1,3 @@
-from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import InvalidSelectorException
 from .locators import MainPageLocators
 from .locators import LoginPageLocators

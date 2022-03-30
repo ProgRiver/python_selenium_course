@@ -1,8 +1,8 @@
 from .pages.login_page import LoginPage
 import pytest
+import time
 
 
-@pytest.mark.skip(reason="Ожидаем настройку формы")
 def test_user_sees_the_elements(browser):
     page = LoginPage(browser, "https://yandex.ru")
     page.open()
@@ -17,3 +17,12 @@ def test_guest_go_to_registration(browser):
     reg.should_be_register_form()
 
 
+@pytest.mark.skip(reason="Маркировка для отчета")
+def test_user_go_to_login(browser):
+    page = LoginPage(browser, "https://passport.yandex.by/auth/welcome")
+    page.open()
+    page.user_enter_id_name()
+    page.click_button_submit()
+    time.sleep(1)
+    page.user_enter_password()
+    page.click_button_submit()

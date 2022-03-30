@@ -1,6 +1,6 @@
 from .base import BasePage
 from .locators import LoginPageLocators
-
+from website_page_autotest_project.reg_config import name, password
 
 text_info = "[!] Элемент не найден [!]"
 
@@ -40,3 +40,19 @@ class LoginPage(BasePage):
 
     def click_button_register_new_user(self):
         self.browser.find_element(*LoginPageLocators.BTN_REGISTER).click()
+
+
+    def click_button_submit(self):
+        self.browser.find_element(*LoginPageLocators.BTN_SUBMIT).click()
+
+    
+    def click_button_cancel(self):
+        self.browser.find_element(*LoginPageLocators.BTN_CANCEL).click()
+
+    
+    def user_enter_id_name(self):
+        self.browser.find_element(*LoginPageLocators.INPUT_EMAIL).send_keys(name)
+
+
+    def user_enter_password(self):    
+        self.browser.find_element(*LoginPageLocators.INPUT_PASSWORD).send_keys(password)
