@@ -21,7 +21,7 @@ ___
 
 Для работы проекта необходимо установить `chromedriver` и `geckodriver`.
 
-Документация Selenium [на сайте](https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/).
+Документация Selenium на [сайте](https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/).
 
 По умолчанию запуск тестов выполняется в браузере *Chrome* с русским языком сайта.
 
