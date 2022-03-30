@@ -1,5 +1,6 @@
 __pycache__
 .pytest_cache
-geckodriver.log
 h.txt
 reg_config.py
+*.log
+*.html

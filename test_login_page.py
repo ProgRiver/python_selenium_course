@@ -17,7 +17,7 @@ def test_guest_go_to_registration(browser):
     reg.should_be_register_form()
 
 
-@pytest.mark.skip(reason="Маркировка для отчета")
+@pytest.mark.skip(reason="Маркировка теста для просмотра отчета")
 def test_user_go_to_login(browser):
     page = LoginPage(browser, "https://passport.yandex.by/auth/welcome")
     page.open()
